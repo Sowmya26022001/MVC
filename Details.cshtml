@@ -1,8 +1,9 @@
 ﻿@model mvc.Models.Employee
 
 @{
-    ViewBag.Title = "Employee Details";
+    Layout = null;
 }
+
 <h2>Employee Details</h2>
 
 <table style="font-family:Arial">
@@ -11,7 +12,7 @@
             Employee ID:
         </td>
         <td>
-            @Model.Id
+            @Model.EmployeeId
         </td>
     </tr>
     <tr>
@@ -32,11 +33,11 @@
     </tr>
     <tr>
         <td>
-            Salary:
+            City:
         </td>
         <td>
             @Model.Salary
         </td>
     </tr>
 </table>
-@Html.ActionLink("Back to List", "Index")
+@Html.ActionLink("Back to List", "Index", new { departmentId = @Model.DepartmentId }) 

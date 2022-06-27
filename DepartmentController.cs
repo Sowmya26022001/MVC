@@ -9,14 +9,11 @@ namespace mvc.Controllers
 {
     public class DepartmentController : Controller
     {
-
-        
-            public ActionResult Index()
-            {
-                EmployeeContext employeeContext = new EmployeeContext();
-                List<Department> departments = employeeContext.Departments.ToList();
-                return View(departments);
-            }
-     
+        public ActionResult Index()
+        {
+            EmployeeContext employeeContext = new EmployeeContext();
+            List<Department> departments = employeeContext.Departments.ToList();
+            return View(departments);
+        }
     }
 }

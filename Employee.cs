@@ -1,18 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Web;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace mvc.Models
+namespace BusinessLayer
 {
-    [Table("tblEmployees")]
     public class Employee
     {
-        public int Id { get; set; }
+        public int EmployeeId { get; set; }
+        [Required]
         public string Name { get; set; }
+        [Required]
         public string Gender { get; set; }
+        [Required]
         public int Salary { get; set; }
+        [Required]
         public int DepartmentId { get; set; }
     }
 }
